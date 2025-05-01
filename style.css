@@ -1,0 +1,202 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    animation: fadeIn 1s ease-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 3;
+    }
+  }
+  .container {
+    text-align: center;
+    background: whitesmoke;
+    padding: 40px;
+    border-radius: 20px;
+    max-width: 450px;
+    width: 100%;
+    animation: slideUp 1s ease-out;
+  }
+  
+  
+  
+  @keyframes slideUp {
+    from {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 3;
+    }
+  }
+  
+  h1 {
+    margin-bottom: 15px;
+    font-size: 32px;
+    color: black;
+    animation: textGlow 1.5s infinite alternate;
+  }
+  
+  @keyframes textGlow {
+    0% {
+      text-shadow: 0 0 15px blueviolet, 0 0 30px pink, 0 0 75px purple;
+    }
+    50% {
+        text-shadow: 0 0 15px blue, 0 0 30px white, 0 0 75px rgb(95, 95, 254);
+      }
+    100% {
+      text-shadow: 0 0 30px rgb(203, 64, 148), 0 0 60px rgb(218, 74, 139), 0 0 90px rgb(232, 111, 161);
+    }
+  }
+  
+  p {
+    margin-bottom: 20px;
+    color:black;
+    font-size: 18px;
+  }
+  
+  input {
+    width: 80%;
+    padding: 15px;
+    font-size: 18px;
+    margin-bottom: 15px;
+    border: 2px solid white;
+    border-radius: 10px;
+    outline: none;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+  }
+  input:focus {
+    border: 2px solid rgb(39, 39, 105);
+    box-shadow: 0 0 10px rgb(7, 7, 38);
+    transform: scale(1.05);
+  }
+  
+  
+  button {
+    padding: 15px 30px;
+    background: black;
+    color: white;
+    font-size: 20px;
+    border: 2px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+  
+  button:hover {
+    background: purple;
+    transform: scale(1.1);
+  }
+  
+  button:active {
+    transform: scale(1);
+  }
+  
+  .result {
+    margin-top: 25px;
+    font-size: 22px;
+    color: #333333;
+    opacity: 0;
+    animation: fadeInUp 1s ease-out forwards;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      transform: translateY(30px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  button {
+    animation: pulse 2s infinite ease-in-out;
+  }
+  @keyframes backgroundShift {
+    0% {
+      background: linear-gradient(135deg, rgb(137, 10, 191), rgb(48, 3, 48), purple);
+    }
+    50% {
+      background: linear-gradient(135deg, purple, rgb(228, 54, 155), rgb(48, 3, 48));
+    }
+    100% {
+      background: linear-gradient(135deg,white,rgb(57, 164, 210),rgb(235, 72, 170), rgb(18, 152, 230),white);
+    }
+  }
+  
+  body {
+    animation: backgroundShift 10s infinite alternate;
+  }
+  @keyframes fadeInText {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  p {
+    animation: fadeInText 1.5s ease-out;
+  }
+  @media screen and (max-width: 480px) {
+    body {
+      padding: 10px; 
+      font-size: 14px; 
+    }
+  
+    .container {
+      padding: 20px; 
+      max-width: 100%; 
+    }
+  
+    h1 {
+      font-size: 24px; 
+    }
+  
+    input {
+      width: 90%;
+      padding: 12px; 
+      font-size: 16px;
+    }
+  
+    button {
+      width: 80%; 
+      padding: 12px; 
+      font-size: 18px; 
+    }
+  
+    p {
+      font-size: 16px; 
+    }
+    
+    .result {
+      font-size: 18px; 
+    }
+  }
+  
